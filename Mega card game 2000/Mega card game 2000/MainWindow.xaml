@@ -1,0 +1,56 @@
+﻿<Page x:Class="Mega_card_game_2000.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Mega_card_game_2000"
+        mc:Ignorable="d"
+        Title="RPG Cards - Character"  Background="Tomato">
+    <Border BorderThickness="20" BorderBrush="Pink">
+    <Grid>
+        <Grid Margin="5">
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition Height="25"/>
+                <RowDefinition />
+                <RowDefinition Height="50"/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <TextBlock x:Name="Name" Text="What is your name, adventurer?" Foreground="BlanchedAlmond" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <TextBox x:Name="getName" Grid.Row="0" Grid.Column="1" Height="20" Width="150" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <TextBlock x:Name="Details" Text=" You've been dealt three cards. &#10; Choose your hand. &#10; but know this, your fate&#10; has already been decided" Foreground="BlanchedAlmond" Grid.Row="0" Grid.Column="2"/>
+
+
+             
+
+
+            <Button x:Name="WarriorButton" Click="WarriorButton_Click" BorderBrush="Black" Grid.Row="3" HorizontalAlignment="Center" Height="25" Background="Tomato" Foreground="BlanchedAlmond" VerticalAlignment="Top">WARRIOR</Button>
+
+            <Button x:Name="ThiefButton" Click="ThiefButton_Click" BorderBrush="Black" Grid.Row="3" Grid.Column="1" HorizontalAlignment="Center" Height="25" Background="Tomato" Foreground="BlanchedAlmond" VerticalAlignment="Top">THIEF</Button>
+            <Button x:Name="MageButton" Click="MageButton_Click" BorderBrush="Black" Grid.Row="3" Grid.Column="2" HorizontalAlignment="Center" Height="25" Background="Tomato" Foreground="BlanchedAlmond" VerticalAlignment="Top">MAGE</Button>
+            <StackPanel Grid.Row="1">
+                
+            </StackPanel>
+            <StackPanel Grid.Row="2">
+                    <TextBlock x:Name="WarriorDetails" HorizontalAlignment="Center" Grid.Row="1" Foreground="BlanchedAlmond" Margin="10"> Warrior's Berserk special attack <LineBreak/> has a 1 in 3 chance of dealing <LineBreak/> 30 damage.</TextBlock>
+                    <Image x:Name="Warrior" Source="Images/Warrior.jpg" Height="100" HorizontalAlignment="Center"/>
+                </StackPanel>
+
+            <StackPanel Grid.Column="1" Grid.Row="2">
+                    <TextBlock x:Name="ThiefDetails" HorizontalAlignment="Center" Grid.Row="1" Grid.Column="1" Foreground="BlanchedAlmond">Thief's Backstab special attack <LineBreak/> has a 1 in 3 chance of dealing <LineBreak/> 20 damage, or only 5 damage <LineBreak/> if it fails.</TextBlock>
+                    <Image x:Name="Thief" Source="Images/thief.jpg" Height="105" Width="150" HorizontalAlignment="Center"/>
+            </StackPanel>
+
+            <StackPanel Grid.Column="2" Grid.Row="2">
+                    <TextBlock x:Name="MageDetails" Grid.Row="1" HorizontalAlignment="Center" Grid.Column="2" Foreground="BlanchedAlmond">Mage's Fireball special attack <LineBreak/> has a 1 in 2 chance of dealing <LineBreak/> 40 damage, or hurting themself <LineBreak/> for -10 HP</TextBlock>
+                    <Image x:Name="Mage" Source="Images/Mage.jpg" Height="105" Width="150" HorizontalAlignment="Center"/>
+            </StackPanel>
+        </Grid>  
+    </Grid>
+    </Border>
+</Page>
